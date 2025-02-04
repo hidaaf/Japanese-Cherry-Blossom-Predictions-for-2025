@@ -12,7 +12,7 @@ This project is going to be an attempt to analyze and model the hidden trends pr
 
 The data collection process relayed heavily on web scrapping techniques, which were used to gather data from the Japan Meteorological Agency website. The picture below shows how the original format of our data looked like on the website.
 
-![Alt text](website snippet.png)
+![Alt text](website%20snippet.png) 
 
 The original dataset was structured with each row representing a different location, covering a total of 58 cities across Japan. The columns on the other hand indicate the years of observation, with the values representing the peak blooming dates (month and year) for each location. The source website also only displays the data for 10 years at a time, which meant that the collection process needed to be done over multiple web pages to compile a comprehensive dataset. Additionally, the dataset also includes information about whether the location is still currently under observation.
 The data processing phase included several steps that allowed us to transform the unstructured output from the JMA website into a structured dataset ready for analysis, key steps included: 
@@ -28,7 +28,7 @@ The data processing phase included several steps that allowed us to transform th
 
 ## Data Analysis
 
-In this section, we tried to dig a bit deeper into the dataset and see what we could find before going into the modeling. For more details, check the  notebook [Data Analysis and Visualization notebook](data analysis and visualization.ipynb) for some cool visualizations and insights 
+In this section, we tried to dig a bit deeper into the dataset and see what we could find before going into the modeling. For more details, check the  notebook [Data Analysis and Visualization notebook](data%20analysis%20and%20visualization.ipynb) for some cool visualizations and insights  
 
 ## Modeling and forecasting
 
@@ -50,7 +50,7 @@ For model performance, our best model was Random forest with an R^2 value of 0.7
 
 In order to get the predicted future values of blooming dates in 2025, we needed a dataset that is similar to our initial dataset used for training the models. Most features were quite easy to obtain with th exception of average temperatures. Since it is not very straight forward to get access to the forecasts of temperatures for 2025 across all locations (especially since the blooming times vary across locations) we instead decided to use the average temperatures across our historical data and use it for our forecasting. 
 
-Results are shown in the [Modeling and Forecasting notebook](modeling and forecasting.ipynb) 
+Results are shown in the [Modeling and Forecasting notebook](modeling%20and%20forecasting.ipynb)
 
 ## Conclusion and future notes
 
