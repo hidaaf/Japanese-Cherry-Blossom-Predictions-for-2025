@@ -2,6 +2,8 @@
 
 ! Note : this page will be updated in the spring to compare our forcasts with the blooming dates in 2025 :) 
 
+![Alt text](sakura.png) 
+
 ## Motivation and Background
 
 Cherry blossom trees, or "Sakura" in the Japanese language, are a distinct species of trees that have become a staple for spring all over the world. Every year, the blossoming of new flowers captivates both locals and tourists, and in most places this natural event officially marks the beginning of the spring season. However, planning holidays and trips in order to witness the Japanese unofficial national flower in its full bloom have shown to be quiet a challenging task. Different factors such as regional climate conditions and yearly weather variations, have made it harder to accurately make these predictions. 
