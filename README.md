@@ -28,7 +28,7 @@ The data processing phase included several steps that allowed us to transform th
 
 ## Data Analysis
 
-In this section, we tried to dig a bit deeper into the dataset and see what we could find before going into the modeling. For more details, check the  notebook [Data Analysis and Visualization notebook](data%20analysis%20and%20visualization.ipynb) for some cool visualizations and insights  
+In this section, we took a closer look at the dataset to uncover key patterns and insights before moving on to modeling. For more details, check out the [Data Analysis and Visualization notebook](data%20analysis%20and%20visualization.ipynb) where we present some cool visualizations and findings.  
 
 ## Modeling and forecasting
 
@@ -36,13 +36,15 @@ Before we could get into our modeling, a few statistical tests were needed to in
 
 ### Additional feature engineering - Lagged Features
 
-Since we decided to use Machine Learnng regression techniques for our forecasting approach, lagged features are a good addition to our data and are a way to compensate for the possible lost information about the effects of the past observations on the current ones. In other words, we will try and capture the temporal dependencies and use previous years' blooming dates as predictors for future years.
+Since we decided to use Machine learning regression techniques for our forecasting approach, lagged features are a good addition to our data and are a way to compensate for the possible lost information about the effects of the past observations on the current ones. In other words, we will try and capture the temporal dependencies and use previous years' blooming dates as predictors for future years.
+
 Lagged data is important, but the number to choose is a bit tricky to define. We want to define a few to capture the effect of previous years but at the same time not too many to not risk overfitting. if we go back we can see that the trend for average blooming dates has been drastically changing in the past 10 years so we have to account for that without overfitting our model, we will start with a 3 lagged features (previous 3 year's bloom day) and test our model performance, if needs call for it we will add or reduce the lag variables.
 
 ### Model training
 
 As we mentioned earlier, our model choice was based off of the model’s ability to capture and correctly handle our time series properties. With that in mind we choose three common examples of machine learning models used in this scenario, namely two ensemble methods Gradient Boosting Machines (GBM), and Random Forest, as well as a Recurrent Neural Networks variant LSTM (Long Short-Term Memory).
 At this point in the analysis, we also chose to train our models on all locations combined (multiple series), we can only hope that the model accurately captures the slight differences between locations, training different models on different locations will be too computationally expensive, and would require much more data. 
+
 It’s important to note as well that our train-test split was done prior to the feature engineering to avoid any possible data leakage. This way, the model only uses information that would have been available at the time of prediction. And as it goes with working with time series our training set consisted of earlier years (data before 2018), while our test set consisted of the years that came after (after 2018).
 For model performance, our best model was Random forest with an R^2 value of 0.73, followed by LSTM with an R^2 of 0.71, and with GBM coming last with 0.706.
 
